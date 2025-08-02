@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [records, setRecords] = useState([
-    { id: 1, name: 'Loading...', email: 'Loading...' },
-    { id: 2, name: 'Nidhi', email: 'Nidhi@gmail.com' },
+    { id: 1, name: 'Loading...', email: 'Loading...' }
   ]);
 
   useEffect(() => {
-    fetch('/records')
+    fetch('http://34.61.98.233.nip.io/records')
       .then((res) => res.json())
       .then((data) => setRecords(data))
       .catch((err) => console.error('Error fetching records:', err));
