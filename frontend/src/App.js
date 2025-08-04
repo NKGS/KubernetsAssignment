@@ -5,8 +5,11 @@ function App() {
     { id: 1, name: 'Loading...', email: 'Loading...' }
   ]);
 
+  //fetch('http://node-api-service/records')
+  //kubectl exec -it <pod> -- curl http://node-api-service/records
+
   useEffect(() => {
-    fetch('http://34.61.98.233.nip.io/records')
+    fetch('http://node-api-service/records')
       .then((res) => res.json())
       .then((data) => setRecords(data))
       .catch((err) => console.error('Error fetching records:', err));

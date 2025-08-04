@@ -16,9 +16,22 @@ const pool = new Pool({
   max: 5, // connection pool
 });
 
+console.log("pool ::")
+
+app.get('/', async (req, res) => {
+  try {
+    res.json({
+      message: 'Welcome to the Node API'
+    });
+  } catch (err) {
+    console.error('DB error:', err);
+    res.status(500).send('Database error');
+  }
+});
+
 app.get('/records', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM items');
+    const result = await pool.query('SELECT * FROM users');
     res.json(result.rows);
   } catch (err) {
     console.error('DB error:', err);
