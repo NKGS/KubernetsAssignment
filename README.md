@@ -4,3 +4,9 @@
 
 ### k8s has all yaml / docker files used for deploying services on google cloud
 
+o Link for the code repository - https://github.com/NKGS/KubernetsAssignment/tree/main/k8s
+
+o Docker hub URL for docker images - https://hub.docker.com/r/lovetwocode/node-api
+
+o URL for Service API tier to view the records from backend tier. - http://nagpkube.duckdns.org/api/records
+
